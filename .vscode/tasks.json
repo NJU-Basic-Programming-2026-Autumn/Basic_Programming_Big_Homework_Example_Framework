@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译并运行星露小谷",
+            "type": "shell",
+            "command": "make run",
+            "windows": {
+                "command": "g++ -std=c++11 src/*.cpp src/optional/*.cpp -o stardew.exe; if ($?) { ./stardew.exe }"
+            },
+            "group": { "kind": "build", "isDefault": true },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
